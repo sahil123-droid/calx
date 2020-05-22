@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		html{
+			height:100%;
+		}
+		body{
+			height: 100%;
+			margin:0;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background:linear-gradient(black,white);
+			
+		}
+		div{
+			width: 70%;
+			height: 20%;
+			position: absolute;
+			margin-left: 180px;
+			color: white;
+			font-size: 40px;
+			transition: text-indent 3s;
+			background: black;
+			border-radius: 20px;
+			border: 5px solid white;
+			font-family: sans-serif;
+
+		}
+		h1{
+			color: white;
+			font-family: cursive;
+			margin-left: 200px;
+			font-size: 60px; 
+			transition: color filter 3s;
+		}
+		h1:hover
+		{
+			color:rgba(255,0,0,1);
+			filter:brightness(150%);
+		}
+	
+	
+		button:hover{
+			cursor: pointer;
+			color:rgba(150,100,50,100);
+			box-shadow: inset 5px 5px;
+			width: 360px;
+			transform: scale(1.2,1.2);
+
+		}
+		
+
+	
+
+	</style>
+	<title></title>
+</head>
+<body>
+	<h1>CALCULATOR</h1>
+	<div id="result">
+		
+	</div>
+	<button onclick="calcm()" id="*" style="margin-top: 140px;margin-left: 200px;width: 230px;height: 80px;font-size: 80px;background-color: orange;border: black;" >*</button>
+	<button onclick="calcdi()" id="/" style="width: 230px;height: 80px;font-size: 80px;background-color: orange;border: black;">/</button>
+	<button onclick="calcsub()" id="-" style="width: 230px;height: 80px;font-size: 80px;background-color: orange;border: black;">-</button>
+	<button onclick="calcadd()" id="+" style="width: 230px;height: 80px;font-size: 80px;background-color: orange;border: black;">+</button>
+	<button onclick="calcf()" id="." style="margin-top:5px;margin-left: 200px;width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">.</button>
+	<button onclick="calc9()" id="9" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">9</button>
+	<button onclick="calc8()" id="8" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">8</button>
+	<button onclick="calc7()" id="7" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">7</button>
+	<button onclick="calc6()" id="6" style="margin-top:5px;margin-left: 200px;width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">6</button>
+	<button onclick="calc5()" id="5" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">5</button>
+	<button onclick="calc4()" id="4" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">4</button>
+	<button onclick="calc3()" id="3" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">3</button>
+	<button onclick="calc2()" id="2" style="margin-top:5px;margin-left: 200px;width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">2</button>
+	<button onclick="calc1()" id="1" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">1</button>
+	<button onclick="calc0()" id="0" style="width: 230px;height: 80px;font-size: 80px;background-color: white;border: black;">0</button>
+	<button onclick="calc()" id="=" style="width: 230px;height: 80px;font-size: 80px;background-color: green;border: black;">=</button>
+	<button onclick="calclear()" id="c" style="width: 130px;height: 80px;font-size: 80px;background-color: red;border: black;">C</button>
+	<script type="text/javascript">
+		var eq=[];
+
+		function calc0()
+		 {
+			document.getElementById("result").innerHTML+=0;
+			eq.push(0);
+			
+		}
+		function calc1()
+		{
+			document.getElementById("result").innerHTML+=1;
+			eq.push(1);
+			
+		}
+		function calc2()
+		{
+			document.getElementById("result").innerHTML+=2;
+			eq.push(2);
+			
+		}function calc3()
+		{
+			document.getElementById("result").innerHTML+=3;
+			eq.push(3);
+			
+		}
+		function calc4()
+		{
+			document.getElementById("result").innerHTML+=4;
+			eq.push(4);
+			
+		}
+		function calc5()
+		{
+			document.getElementById("result").innerHTML+=5;
+			eq.push(5);
+				}
+		function calc6()
+		{
+			document.getElementById("result").innerHTML+=6;
+			eq.push(6);
+					}
+		function calc7()
+		{
+			document.getElementById("result").innerHTML+=7;
+			eq.push(7);
+			
+		}
+		function calc8()
+		{
+			document.getElementById("result").innerHTML+=8;
+			eq.push(8);
+			
+		}
+		function calc9()
+		{
+			document.getElementById("result").innerHTML+=9;
+			eq.push(9);
+			
+		}
+		function calcf()
+		{
+			document.getElementById("result").innerHTML+=".";
+			eq.push(".");
+			
+		}
+		function calcm()
+		{
+			document.getElementById("result").innerHTML+="*";
+			eq.push("*");
+			
+		}
+		function calcdi()
+		{
+			document.getElementById("result").innerHTML+="/";
+			eq.push("/");
+			
+		}
+		function calcsub()
+		{
+			document.getElementById("result").innerHTML+="-";
+			eq.push("-");
+			
+		}
+		function calcadd()
+		{
+			document.getElementById("result").innerHTML+="+";
+			eq.push("+");
+			
+		}
+		function calclear()
+		{
+			document.getElementById("result").innerHTML="";
+			eq=[];
+		}
+		function calc()
+		{
+			eq=eq.join("");
+			var c="";
+			for(i=0;i<eq.length;i++)
+			{
+				if(eq.charCodeAt(i)>=48 && eq.charCodeAt(i)<=57)
+				c+=parseFloat(eq[i])
+				else
+				c+=eq[i];	
+			}
+			var d=eval(c);
+			document.getElementById("result").innerHTML="="+d;
+
+			
+		
+	
+		}
+
+
+
+		
+	</script>
+
+
+
+
+</body>
+</html>
